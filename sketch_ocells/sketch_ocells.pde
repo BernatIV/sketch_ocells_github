@@ -4,13 +4,15 @@
 
 // Definim l'array
 Ocell[] ocells;
+// PUnitat pUnitat;
 
 void setup() {
   size(1500, 800);
   noStroke();
   
-  // Instanciem l'array
+  // Instanciem l'array i la PUnitat
   ocells = new Ocell[30];
+  // pUnitat = new PUnitat();
   
   for (int i = 0; i < ocells.length; i++) {
     float diametre = (float) Math.random() * 20 + 10;
@@ -31,8 +33,16 @@ void draw() {
     } else {
       ocell.move();
     }
-    
   }
+  
+  // Prova d'unitat
+  /*for (Ocell ocell : ocells) {
+    ocell.comprovarColorO();
+  }*/
+  
+  /*for (Ocell ocell : ocells) {
+    pUnitat.comprovarColor((int) ocell.xPos, (int) ocell.yPos);
+  }*/
 }
 
 
@@ -50,7 +60,7 @@ boolean esAProp(float xPos, float yPos, float amplada) {
       if (ocell.xPos > xPos - sumaDosRadis && ocell.xPos < xPos + sumaDosRadis) {
         // i està dins el quadrat a l'eix de les y
         if (ocell.yPos > yPos - sumaDosRadis && ocell.yPos < yPos + sumaDosRadis) {
-          println("Suma dels dos radis: " + sumaDosRadis);
+          // println("Suma dels dos radis: " + sumaDosRadis);
           return  true;
         }
       }
@@ -101,6 +111,9 @@ void mouseReleased() {
  
   PROVA D'UNITAT
 
+
+
+  Posar un objecte com el que va demanar a l'examen i després borrar-lo. SABER COM FER EL GET (COLOR D'UN PIXEL). 
 */
 
 /*
@@ -111,6 +124,9 @@ void mouseReleased() {
   - això 
   - i això
   ja estaria bé per a l'examen?
+  
+  
+  Preguntar si no passa res per no fer el mode Debug?
   
   I passar-li el programa
 */

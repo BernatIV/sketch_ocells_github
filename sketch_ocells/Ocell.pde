@@ -18,6 +18,8 @@ class Ocell {
   int[] colorRed = { 255, 0, 0 };
   int[] colorBlue = { 0, 0, 255 };
   
+  PUnitat pUnitat;
+  
   
   // Constructor
   Ocell (float xPos, float yPos, float amplada, float alcada) {
@@ -30,6 +32,8 @@ class Ocell {
     this.puntAleatori = new int[2];
     puntAleatori[0] = (int) (Math.random() * width);
     puntAleatori[1] = (int) (Math.random() * height);
+    
+    pUnitat = new PUnitat();
   }
   
   
@@ -154,7 +158,18 @@ class Ocell {
   
   
   
+  // Prova d'unitat
+  /*void comprovarColorO() {
+    pUnitat.comprovarColor((int) xPos, (int) yPos);
+  }*/
+  
+  
+  
   void display () {
+    // Prova d'unitat
+    pUnitat.comprovarColor((int) xPos, (int) yPos);
+    
+    // Crear ocell
     fill(colorOcell[0], colorOcell[1], colorOcell[2]);
     ellipse(xPos, yPos, amplada, alcada);
   }
