@@ -158,13 +158,6 @@ class Ocell {
   
   
   
-  // Prova d'unitat
-  /*void comprovarColorO() {
-    pUnitat.comprovarColor((int) xPos, (int) yPos);
-  }*/
-  
-  
-  
   void display () {
     // Prova d'unitat
     pUnitat.comprovarColor((int) xPos, (int) yPos);

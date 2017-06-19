@@ -1,13 +1,6 @@
-/**
-  Que quan se separen del ratolí i surten de la pantalla, doncs comprovar això. 
-  
-  
-  Que quan dos ocells passen l'un per sobre de l'altre canviïn de color, 
-  o solucionar quan dos ocells s'enganxen. 
-  
-  
+/*
+  Aquesta prova d'unitat detecta quan els ocells surten de la pantalla. 
 */
-
 
 class PUnitat {
   PImage img;
@@ -29,9 +22,10 @@ class PUnitat {
       println("Tot va bé");
     } else if (c == cOcell) {
       println("Hi ha hagut una col·lisió entre ocells!");
-    } else {
+    } else if (c == 0) {
       println("Ocell fora de la pantalla");
-      image(img, 1350, 50);
+      println("Valor c: " + c);
+      image(img, 50, 50);
     }
     
   }

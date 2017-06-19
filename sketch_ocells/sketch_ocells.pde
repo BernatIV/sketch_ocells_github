@@ -4,10 +4,10 @@
 
 // Definim l'array
 Ocell[] ocells;
-// PUnitat pUnitat;
+
 
 void setup() {
-  size(1500, 800);
+  size(1000, 650);
   noStroke();
   
   // Instanciem l'array i la PUnitat
@@ -35,14 +35,6 @@ void draw() {
     }
   }
   
-  // Prova d'unitat
-  /*for (Ocell ocell : ocells) {
-    ocell.comprovarColorO();
-  }*/
-  
-  /*for (Ocell ocell : ocells) {
-    pUnitat.comprovarColor((int) ocell.xPos, (int) ocell.yPos);
-  }*/
 }
 
 
@@ -102,31 +94,23 @@ void mouseReleased() {
   }
 }
 
-
 /*
- 
-  EN TOT MOMENT PRENEN LES SEVES PRÒPIES DECISIONS
+  PER ACABAR: 
   
-  ES COMUNIQUIN ENTE ELLES: Saben si estan a prop les unes de les altres. 
- 
-  PROVA D'UNITAT
-
-
-
-  Posar un objecte com el que va demanar a l'examen i després borrar-lo. SABER COM FER EL GET (COLOR D'UN PIXEL). 
+    Implementar l'objecte que es mou sol i es torna vermell si passa per sobre d'un altre objecte
+    
+    Fer una altra prova d'unitat. 
+  
+  
 */
 
 /*
-  Enviar-li a l'antonio un correu: 
+ 
+  PRENEN LES SEVES PRÒPIES DECISIONS
   
-  si el meu programa fa 
-  - això 
-  - això 
-  - i això
-  ja estaria bé per a l'examen?
-  
-  
-  Preguntar si no passa res per no fer el mode Debug?
-  
-  I passar-li el programa
+  ES COMUNIQUIN ENTE ELLES: Saben si estan a prop les unes de les altres. 
+ 
+  PROVA D'UNITAT: Es crida des de l'objecte al mètode display(). 
+  Comprova que els ocells no surtin del canvas.  
+
 */
