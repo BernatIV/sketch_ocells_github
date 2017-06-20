@@ -5,6 +5,8 @@
 // Definim l'array
 Ocell[] ocells;
 
+boolean modeDebug = false;
+
 
 void setup() {
   size(1000, 650);
@@ -22,9 +24,15 @@ void setup() {
 
 void draw() {
   background(40);
+  fill(255);
+  text("MODE DEBUG: TECLA 0", 50, 25);
+  
+  if (modeDebug) {
+    text("FES CLIC AMB EL BOTÓ ESQUERRA O DRET DEL RATOLÍ PERQUÈ ELS OCELLS VINGUIN O MARXIN", 220, 25);
+  }
   
   for (Ocell ocell : ocells) {
-    ocell.display();
+    ocell.display(modeDebug);
     
     if (mousePressed && mouseButton == LEFT) {
       ocell.moveToMouse();
@@ -91,6 +99,13 @@ void mouseReleased() {
       ocell.setColor();
       ocell.novesPosicions();
     }
+  }
+}
+
+
+void keyPressed() {
+  if (key == '0') {
+    modeDebug = !modeDebug;
   }
 }
 

@@ -158,12 +158,18 @@ class Ocell {
   
   
   
-  void display () {
+  void display (boolean modeDebug) {
     // Prova d'unitat
     pUnitat.comprovarColor((int) xPos, (int) yPos);
     
     // Crear ocell
     fill(colorOcell[0], colorOcell[1], colorOcell[2]);
     ellipse(xPos, yPos, amplada, alcada);
+    
+    //Mode Debug
+    if (modeDebug) {
+      fill(255);
+      text("Pos X: " + this.xPos + "\nPos Y: " + this.yPos + "\nDiametre: " + this.amplada, this.xPos + 15, this.yPos);
+    }
   }
 }
